@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rm *.so *.o *.cxx Makefile
+swig -c++ -ruby spi_lib.i
+ruby extconf.rb
+make
+sudo make install
